@@ -168,8 +168,9 @@
           var bounds;
           var useRelative = (containerPositioning === 'relative');
 
-          element.x = event.pageX - pos.offsetX;
-          element.y = event.pageY - pos.offsetY;
+          // use page X/Y as we're using position:fixed on .as-sortable-drag - Jaz
+          element.x = event.pageX - window.pageXOffset;
+          element.y = event.pageY - window.pageYOffset;
 
           if (container) {
             bounds = this.offset(container, scrollableContainer);

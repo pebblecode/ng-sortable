@@ -5,3 +5,6 @@ node_modules
 *.iml
 *.yml
 .*
+
+demo/bower_components
+demo/dist
